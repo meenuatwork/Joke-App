@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import './App.css'
 
 function App() {
   const [count, setCount] = useState([])
@@ -25,10 +26,16 @@ function App() {
 
   return (
     <>
-      <h1> Tell me a Jokes</h1>
-      <p>{count}</p>
-      <p>{jokes}</p>
-      <button onClick={fetchJokes}>click</button>
+    
+      <h1 className='handing'> Tell me a Jokes</h1>
+      <div className='container'>
+      <p className='jokes'>{jokes}</p>
+      <p className='count'>{count}</p>
+    
+      <div>
+      <button className='btn' onClick={fetchJokes}>Click</button>
+      </div>
+      </div>
     </>
   )
 }
