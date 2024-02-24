@@ -6,7 +6,7 @@ function App() {
   const [jokes, setJokes] = useState("")
   //console.log(count)
   const fetchJokes = () => {
-    fetch("https://v2.jokeapi.dev/joke/Any")
+    fetch("https://v2.jokeapi.dev/joke/Any?blacklistFlags=nsfw,racist,sexist,explicit")
       .then((response) => {
         return response.json()
       })
